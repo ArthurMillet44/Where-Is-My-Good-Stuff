@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@200..800&display=swap');
+
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+p{
+  font-family: "BioRhyme", serif;
+}
+
+strong{
+  font-family: "BioRhyme", serif;
+}
+
+
+
+.bandeau-principal{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #FFFFFF;
+  padding-bottom: 15px;
+  padding-top: 0.1%;
+}
+
+body{
+
+  background-color: #2d3b55;
+
+  height: 100vh;
+}
+
+#statut{
+  align-self: center;
+  font-family: "BioRhyme", serif;
+}
+
+.TitrePage{
+  font-family: "BioRhyme", serif;
+  display: flex;
+  font-size:calc(20px + 2vw);
+  justify-content: center;
+  margin-top: 25px;
+  margin-bottom: -10px;
+}
+
+.categorie{
+  gap: 5%;
+  background: linear-gradient(to bottom, #dcdcdc, #949494);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+}
+
+
+
+.leaflet-container {
+  border-radius: 2rem;
+  border: solid #ffffff 5px;
+}
+
+.grid-container {
+  display: flex;
+  background-color: #2d3b55;
+  margin: 20px;
+  height: 85vh;
+}
+
+.col-1 {
+  margin: auto;
+  padding-bottom: 3%;
+  padding-top: 3%;
+  background-color: white;
+  border-radius: 10px;
+  border: #000000 5px solid;
+  height: 70%;
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.col-2 {
+  margin-top: 4%;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.line{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.log{
+  margin-bottom: 15px;
+}
+
+.column_checkbox{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+}
+
+.column{
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.bike-cluster{
+  background-color: #ffffff;
+  border-radius: 15px;
+  color: black;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+
+.toilet-cluster{
+  background-color: #2d3b55;
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+
+
+
+
+
+
+.custom-btn {
+  width: 130px;
+  height: 40px;
+  padding: 10px 25px;
+  border: 2px solid #000;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+}
+
+
+.btn-12{
+  position: relative;
+  right: 20px;
+  bottom: 20px;
+  border:none;
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  -webkit-perspective: 230px;
+  perspective: 230px;
+
+}
+.btn-12 span {
+  display: block;
+  position: absolute;
+  width: 130px;
+  height: 40px;
+  border: 2px solid #000;
+  margin:0;
+  text-align: center;
+
+
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.btn-12 span:nth-child(1) {
+  background-color: #2d3b55;
+  color: white;
+  box-shadow:
+          -7px -7px 20px 0px #fff9,
+          -4px -4px 5px 0px #fff9,
+          7px 7px 20px 0px #0002,
+          4px 4px 5px 0px #0001;
+
+  transform: rotateX(90deg);
+  -webkit-transform-origin: 50% 50% -20px;
+
+  transform-origin: 50% 50% -20px;
+}
+.btn-12 span:nth-child(2) {
+
+  transform: rotateX(0deg);
+  -webkit-transform-origin: 50% 50% -20px;
+
+  transform-origin: 50% 50% -20px;
+}
+.btn-12:hover span:nth-child(1) {
+
+  transform: rotateX(0deg);
+}
+.btn-12:hover span:nth-child(2) {
+  background: white;
+  color: #e0e5ec;
+  transform: rotateX(-80deg);
+}
+
+button{
+  font-family: 'Rubik', sans-serif;
+}
+
+label{
+  font-family: "BioRhyme", serif;
+}
+
+.checkbox {
+  --s: 20px; /* adjust this to control the size*/
+
+  height: calc(var(--s) + var(--s)/5);
+  width: auto; /* some browsers need this */
+  aspect-ratio: 2.25;
+  border-radius: var(--s);
+  margin: calc(var(--s)/2);
+  display: grid;
+  cursor: pointer;
+  background-color: white;
+  box-sizing: content-box;
+  overflow: hidden;
+  transition: .3s .1s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: solid black 1px;
+}
+.checkbox:before{
+  content: "";
+  padding: calc(var(--s)/10);
+  --_g: radial-gradient(circle closest-side at calc(100% - var(--s)/2) 50%,#000 96%,#0000);
+  background:
+          var(--_g) 0 /var(--_p,var(--s)) 100% no-repeat content-box,
+          var(--_g) var(--_p,0)/var(--s)  100% no-repeat content-box,
+          #fff;
+  mix-blend-mode: darken;
+  filter: blur(calc(var(--s)/12)) contrast(11);
+  transition: .4s, background-position .4s .1s,
+  padding cubic-bezier(0,calc(var(--_i,-1)*200),1,calc(var(--_i,-1)*200)) .25s .1s;
+}
+.checkbox:checked {
+  background-color: #2d3b55;
+}
+.checkbox:checked:before {
+  padding: calc(var(--s)/10 + .05px) calc(var(--s)/10);
+  --_p: 100%;
+  --_i: 1;
+}
+
+
+.close{
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1001;
+}
+
+
+
+
+
+
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.15rem;
+  color: black;
+  padding-bottom: 8px;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+   color: transparent;
+ }
+
+.form__field:placeholder-shown ~ .form__label {
+   font-size: 1.3rem;
+   cursor: text;
+   top: 20px;
+ }
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #2d3b55;
+  font-weight: 700;
+  padding-bottom: 6px;
+  border-width: 3px;
+
+}
+
+/* Reset input */
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+
+.popUp {
+  border: 2px solid #2d3b55;
+  border-radius: 12px; /* Arrondissez les coins de la popup */
+}
+.rating-container {
+  display: flex;
+  align-items: center; /* Alignement vertical */
+}
+
+.noteRating{
+  display: flex;
+  flex-direction: column;
+}
+
+.labelNote{
+  margin-left: 10px;
+}
+
+.laisseAvis {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: #fff;
+  width: 500px;
+  margin: 65px auto;
+  display: -webkit-box;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  border-radius: 4px;
+  box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+  z-index: 1002;
+  position: fixed;
+  top: 30%;
+  left: 40%;
+}
+.login-box h1 {
+  padding: 35px 35px 0 35px;
+  font-weight: 300;
+}
+
+.login-box .content {
+  padding: 35px;
+  text-align: center;
+}
+.login-box .input-field {
+  padding: 12px 5px;
+}
+.login-box .input-field input {
+  font-size: 16px;
+  display: block;
+  font-family: 'Rubik', sans-serif;
+  width: 100%;
+  padding: 10px 1px;
+  border: 0;
+  border-bottom: 1px solid #747474;
+  outline: none;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+.login-box .input-field input::-webkit-input-placeholder {
+  text-transform: uppercase;
+}
+.login-box .input-field input::-moz-placeholder {
+  text-transform: uppercase;
+}
+.login-box .input-field input:-ms-input-placeholder {
+  text-transform: uppercase;
+}
+.login-box .input-field input::-ms-input-placeholder {
+  text-transform: uppercase;
+}
+.login-box .input-field input::placeholder {
+  text-transform: uppercase;
+}
+.login-box .input-field input:focus {
+  border-color: #222;
+}
+.login-box a.link {
+  text-decoration: none;
+  color: #747474;
+  letter-spacing: 0.2px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-top: 20px;
+}
+.login-box .action {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-direction: row;
+}
+.login-box .action button {
+  width: 100%;
+  border: none;
+  padding: 18px;
+  font-family: 'Rubik', sans-serif;
+  cursor: pointer;
+  text-transform: uppercase;
+  background: #e8e9ec;
+  color: #777;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 0;
+  letter-spacing: 0.2px;
+  outline: 0;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+.login-box .action button:hover {
+  background: #d8d8d8;
+}
+.login-box .action button:nth-child(2) {
+  background: #2d3b55;
+  color: #fff;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 4px;
+}
+.login-box .action button:nth-child(2):hover {
+  background: #3c4d6d;
+}
+.displayBlock{
+  display: block;
+}
+#validation {
+  font-family: 'Rubik', sans-serif;
+  text-align: center;
+  color: red;
+
+}
+

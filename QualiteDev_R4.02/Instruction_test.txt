@@ -1,0 +1,16 @@
+Pour lancer les tests:
+
+
+Dans le BACK-END:
+
+Les test du Back-Ends (DAOS, Routes, Models...) se lancent à partir du Dossier Web/ situé à la racine du projet..
+
+Dans ce dossier, faites un "npm i" pour être assuré que tous les modules soient à jour.
+
+Ensuite taper la commande "npm test".
+
+Les tests devraient normalement se lancer sans problème.
+
+Dans le FRONT-END:
+
+Idem mais dans le dossier my-app à la racine.

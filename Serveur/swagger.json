@@ -1,0 +1,231 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "User API Documentation",
+    "description": "",
+    "version": "1.0.0"
+  },
+  "host": "localhost:8080/api/v1",
+  "basePath": "/",
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/bike": {
+      "get": {
+        "summary": "renvoie tous les vélo",
+        "description": "renvoie tous les vélo",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/wc": {
+      "get": {
+        "summary": "renvoie tous les WC",
+        "description": "renvoie tous les WC",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "ajoute un WC",
+        "description": "ajoute un WC",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "identifiant": {
+                  "example": "any"
+                },
+                "nom": {
+                  "example": "any"
+                },
+                "latitude": {
+                  "example": "any"
+                },
+                "longitude": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/wc/{idToilette}": {
+      "get": {
+        "summary": "renvoie un WC en fonction de son id",
+        "description": "renvoie un WC en fonction de son id",
+        "parameters": [
+          {
+            "name": "idToilette",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user": {
+      "get": {
+        "summary": "renvoie tous les users",
+        "description": "renvoie tous les users",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "summary": "ajoute un user",
+        "description": "ajoute un user si il est valide et qu",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "login": {
+                  "example": "any"
+                },
+                "password": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "summary": "supprime tous les users",
+        "description": "supprime tous les users",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/{login}": {
+      "get": {
+        "summary": "renvoie un user selon son login",
+        "description": "renvoie un user selon son login",
+        "parameters": [
+          {
+            "name": "login",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/login": {
+      "post": {
+        "summary": "identification",
+        "description": "vérifie si les identifiants du user et le renvoie si ils sont valident",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "login": {
+                  "example": "any"
+                },
+                "password": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/user/{login}/{idToilette}/{note}": {
+      "get": {
+        "summary": "ajoute un avis",
+        "description": "ajoute un avis dans un user pour un idToilette et une note donnée",
+        "parameters": [
+          {
+            "name": "login",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "idToilette",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "note",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    }
+  }
+}

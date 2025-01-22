@@ -1,0 +1,42 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "web",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "nodemon server.mjs",
+    "test": "c8 nyc mocha --timeout 10000 --cahe off --exit ",
+    "start-gendoc": "node swagger-autogen.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@stryker-mutator/core": "^8.2.6",
+    "bcrypt": "^5.1.1",
+    "c8": "^9.1.0",
+    "chai": "^5.0.3",
+    "chai-datetime": "^1.8.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "https-proxy-agent": "^7.0.4",
+    "mocha": "^10.2.0",
+    "mongodb": "^6.5.0",
+    "mongodb-memory-server": "^9.1.6",
+    "mongoose": "^8.1.1",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.0.3",
+    "nyc": "^15.1.0",
+    "ssh2": "^1.15.0",
+    "stryker": "^0.35.1",
+    "swagger": "^0.7.5",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.0",
+    "tunnel-ssh": "^5.1.2",
+    "typed-inject": "^4.0.0"
+  },
+  "devDependencies": {
+    "@stryker-mutator/mocha-runner": "^8.2.6",
+    "supertest": "^6.3.4"
+  }
+}
